@@ -1,0 +1,33 @@
+.board {
+  --board-width: 90vh;
+  margin: auto;
+  width: var(--board-width);
+  height: calc(var(--board-width) * 6/7);
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  /* border: 1px solid black; */
+  background-color: blue;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+}
+
+.cell {
+  background-color: white;
+  margin: auto;
+  border-radius: 50%;
+  width: 90%;
+  aspect-ratio: 1/1;
+}
+
+/* Potrait */
+@media (orientation: portrait) {
+  .board {
+    --board-width: 90vw;
+  }
+}
