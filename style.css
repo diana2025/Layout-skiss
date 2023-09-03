@@ -1,6 +1,6 @@
 .board {
   --board-width: 90vh;
-  margin: auto;
+  margin: 150px auto;
   width: var(--board-width);
   height: calc(var(--board-width) * 6/7);
   display: flex;
@@ -9,25 +9,61 @@
 
 .column {
   /* border: 1px solid black; */
-  background-color: blue;
+  /* background-color: blue; */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cmask id='hole'%3E%3Crect width='100%25' height='100%25' fill='white' /%3E%3C!-- 6 evenly spaced circles (in y direction) with radius = 10%25 --%3E%3Ccircle cx='50%25' cy='8.33%25' r='10%25' fill='black' /%3E%3Ccircle cx='50%25' cy='25%25' r='10%25' fill='black' /%3E%3Ccircle cx='50%25' cy='41.66%25' r='10%25' fill='black' /%3E%3Ccircle cx='50%25' cy='58.33%25' r='10%25' fill='black' /%3E%3Ccircle cx='50%25' cy='75%25' r='10%25' fill='black' /%3E%3Ccircle cx='50%25' cy='91.66%25' r='10%25' fill='black' /%3E%3C/mask%3E%3C/defs%3E%3C!-- Square with circle cutout --%3E%3Crect width='100%25' height='100%25' fill='blue' mask='url(%23hole)' /%3E%3C/svg%3E");
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column-reverse;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.cell {
+
+.piece {
+  background-color: gray;
+  /* margin: 10%; */
+  border-radius: 50%;
+  width: 100%;
+  z-index: -1;
+  aspect-ratio: 1/1;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.drop {
+  --piece-number: 5;
+  animation: drop calc(0.5s/var(--piece-number)) linear;
+}
+
+/* .cell {
   background-color: white;
   margin: auto;
   border-radius: 50%;
   width: 90%;
   aspect-ratio: 1/1;
-}
+} */
 
 /* Potrait */
 @media (orientation: portrait) {
   .board {
     --board-width: 90vw;
+  }
+}
+
+/* Drop piece animation keyframe */
+@keyframes drop {
+  0% {
+    transform: translateY(calc((7 - var(--piece-number)) * -100%));
+  }
+
+  100% {
+    transform: translateY(0%);
   }
 }
