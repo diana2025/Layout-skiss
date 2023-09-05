@@ -1,8 +1,9 @@
 .board {
   --board-width: 90vh;
+  --board-height: calc(var(--board-width) * 6/7);
   margin: auto;
   width: var(--board-width);
-  height: calc(var(--board-width) * 6/7);
+  height: var(--board-height);
   display: flex;
   flex-direction: row;
 }
