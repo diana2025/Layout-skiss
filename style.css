@@ -1,16 +1,31 @@
-.board {
+.game-container {
   --board-width: 90vh;
   --board-height: calc(var(--board-width) * 6/7);
-  margin: auto;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+}
+
+.game-info {
+  background-color: bisque;
+  width: calc(100vw - var(--board-width));
+  max-width: calc(var(--board-width) * 3/7);
+  height: var(--board-height);
+  /* float: left; */
+}
+
+.board {
+  background-color: blue;
   width: var(--board-width);
   height: var(--board-height);
+  /* float: left; */
+  /* margin-left: 100px; */
   display: flex;
   flex-direction: row;
 }
 
 .column {
   /* border: 1px solid black; */
-  background-color: blue;
   height: 100%;
   width: 100%;
   display: flex;
@@ -27,8 +42,23 @@
 }
 
 /* Potrait */
-@media (orientation: portrait) {
+@media (max-aspect-ratio: 7/6) {
+  .game-container {
+    --board-width: 80vw;
+    display: block;
+  }
+
   .board {
-    --board-width: 90vw;
+    /* float: none; */
+    margin: auto;
+  }
+
+  .game-info {
+    margin-top: 0;
+    margin: auto;
+    height: calc(95vh - var(--board-height));
+    width: var(--board-width);
+    max-width: none;
+    /* float: none; */
   }
 }
