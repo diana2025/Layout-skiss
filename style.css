@@ -126,6 +126,8 @@ select {
   box-sizing: border-box;
   box-shadow: 5px 2px 2px 2px #111111;
   border: none;
+  color: black;
+  background-color: white;
 }
 
 /* select {
