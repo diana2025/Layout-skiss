@@ -30,8 +30,9 @@ body {
   margin-right: 10px;
 }
 
-.game-info {
-  margin: 0px;
+.game-info>* {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .error-animation {
@@ -105,6 +106,19 @@ body {
 
 input[type="text"] {
   width: 40%;
+  height: 30px;
+  border-radius: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: 5px 2px 2px 2px #111111;
+}
+
+select {
+  width: 30%;
   height: 30px;
   border-radius: 25px;
   margin-left: 5px;
