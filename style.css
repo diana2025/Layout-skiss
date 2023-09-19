@@ -102,7 +102,8 @@ body {
 }
 
 .player-1-border {
-  border-bottom: 2px solid #ff0000 !important;
+  border: 1px solid #000000 !important;
+  box-shadow: -5px 0px 0px 0px #ff0000 !important;
 }
 
 .player-2 {
@@ -110,7 +111,8 @@ body {
 }
 
 .player-2-border {
-  border-bottom: 2px solid #FFFF00 !important;
+  border: 1px solid #000000 !important;
+  box-shadow: -5px 0px 0px 0px #FFFF00 !important;
 }
 
 input[type="text"],
@@ -124,24 +126,10 @@ select {
   padding: 5px;
   font-size: 1rem;
   box-sizing: border-box;
-  box-shadow: 5px 2px 2px 2px #111111;
   border: none;
   color: black;
   background-color: white;
 }
-
-/* select {
-  width: 30%;
-  height: 30px;
-  border-radius: 25px;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding: 5px;
-  font-size: 1rem;
-  box-sizing: border-box;
-  border: none;
-  box-shadow: 5px 2px 2px 2px #111111;
-} */
 
 button {
   width: 50%;
